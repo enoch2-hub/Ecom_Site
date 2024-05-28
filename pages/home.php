@@ -11,7 +11,16 @@ $products = getProducts();
 </head>
 <body>
     <!-- <h1>Welcome to our Tech Store</h1> -->
-    <h1>T S</h1>
+    <div class="navbar">
+        <h1>T S</h1>
+        <div class="navlinks">
+            <a href="index.php?page=home">Home</a>
+            <a href="index.php?page=products">Products</a>
+            <a href="index.php?page=cart">Cart</a>
+        </div>
+    </div>
+
+
     <div class="products">
         <?php foreach ($products as $product): ?>
             <div class="product">
