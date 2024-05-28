@@ -1,0 +1,33 @@
+ecommerce-tech-products/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── img/
+│   └── product1.jpg
+│   └── product2.jpg
+│   └── ...
+│
+├── includes/
+│   └── db.php         // Database connection script
+│   └── functions.php  // PHP functions for common tasks
+│
+├── pages/
+│   └── home.php       // Home page
+│   └── login.php      // Login page
+│   └── register.php   // Registration page
+│   └── products.php   // Product listing page
+│   └── product.php    // Product detail page
+│   └── cart.php       // Shopping cart page
+│   └── checkout.php   // Checkout page
+│   └── profile.php    // User profile page
+│
+├── index.php          // Main entry point
+└── admin/             // Admin panel (optional)
+    ├── login.php      // Admin login page
+    ├── dashboard.php  // Admin dashboard
+    ├── products.php   // Manage products
+    └── orders.php     // View orders
