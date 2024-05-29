@@ -42,6 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Login</button>
+            <br><br><br>
+            <span>Don't have an account? <a href="index.php?page=register">Register</a></span>
+            <br><br><br><br><br>
+            <div class="navlinks">
+                <a href="index.php?page=home">Home</a>
+            </div>
         </form>
     </div>
 </body>

@@ -56,6 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="email" id="email" name="email" required>
             </div>
             <button type="submit">Register</button>
+            <br><br><br>
+            <span>Already have an account? <a href="index.php?page=login">Login</a></span>
+            <br><br><br><br><br>
+            <div class="navlinks">
+                <a href="index.php?page=home">Home</a>
+            </div>
+
         </form>
     </div>
 </body>
