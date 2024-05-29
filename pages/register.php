@@ -30,6 +30,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
+
+    <div class="navbar">
+        <a href="index.php?page=home" style="text-decoration:none">
+            <h1 class='font3'>T S</h1>
+        </a>
+        <div class="navlinks">
+            <a href="index.php?page=home">Home</a>
+            <a href="index.php?page=products">Products</a>
+            <a href="index.php?page=cart">Cart</a>
+            <?php if (isset($_SESSION['user'])): ?>
+                <a href="index.php?page=profile">
+                    <img src="img/<?php echo $_SESSION['user']['profile_pic']; ?>" alt="Profile Picture" class="profile-pic">
+                    <?php echo $_SESSION['user']['username']; ?>
+                </a>
+                <a href="index.php?page=logout">Logout</a>
+            <?php else: ?>
+                <a href="index.php?page=login">Login</a>
+                <a href="index.php?page=register">Register</a>
+            <?php endif; ?>
+        </div>
+    </div>
+
+
+
     <div class="register-container">
         <h2>Register</h2>
         <?php if ($error): ?>
