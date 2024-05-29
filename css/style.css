@@ -31,6 +31,27 @@ body {
     padding: 0 10rem;
 }
 
+.navlinks > a{
+    color: #444;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.navlinks > a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+
+.username {
+    background-color: #b12a5b;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
 /*--------------- Products page------------------ */
 
@@ -40,6 +61,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 10rem;
+    margin-top: 4rem;
     padding: 1rem 6rem;
     background-color: #89c2ff73;
     border-radius: 1rem;
@@ -54,7 +76,6 @@ body {
     height: 28rem;
     box-sizing: border-box;
     text-align: center;
-    cursor: pointer;
 }
 
 .product:hover {
@@ -128,7 +149,7 @@ body {
     }
 
     .product {
-        width: calc(60% - 32px);
+        width: calc(90% - 32px);
     }
 }
 
@@ -181,3 +202,139 @@ body {
 .product-single a:hover {
     background-color: #0056b3;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- login---------------- */
+
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login-container .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login-container form div {
+    margin-bottom: 1rem;
+}
+
+.login-container form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.login-container form input {
+    width: calc(100% - 20px);
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+/* -----------------register---------------- */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}
+
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.register-container .error {
+    color: red;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.register-container .success {
+    color: green;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.register-container form div {
+    margin-bottom: 1rem;
+}
+
+.register-container form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.register-container form input {
+    width: calc(100% - 20px);
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register-container form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-container form button:hover {
+    background-color: #0056b3;
+}
+

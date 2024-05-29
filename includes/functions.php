@@ -2,22 +2,55 @@
 // functions.php
 include_once 'db.php';
 
-function getProducts() {
-    global $conn;
-    $sql = "SELECT * FROM products";
-    $result = $conn->query($sql);
-    return $result->fetch_all(MYSQLI_ASSOC);
-}
-
 function getProduct($id) {
-    global $conn;
-    $sql = "SELECT * FROM products WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param('i', $id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    return $result->fetch_assoc();
+    global $pdo;
+
+    $stmt = $pdo->prepare('SELECT * FROM products WHERE id = :id');
+    $stmt->execute(['id' => $id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-// Add more functions as needed
+function getProducts() {
+    global $pdo;
+
+    $stmt = $pdo->query('SELECT * FROM products');
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+function login($username, $password) {
+    global $pdo;
+    
+    $stmt = $pdo->prepare('SELECT id, username, password FROM users WHERE username = :username');
+    $stmt->execute(['username' => $username]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user && password_verify($password, $user['password'])) {
+        return $user;
+    }
+    
+    return false;
+}
+
+function register($username, $password, $email) {
+    global $pdo;
+
+    // Check if username already exists
+    $stmt = $pdo->prepare('SELECT id FROM users WHERE username = :username');
+    $stmt->execute(['username' => $username]);
+    if ($stmt->fetch()) {
+        return false; // Username already taken
+    }
+
+    // Hash the password before storing it
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insert the new user into the database
+    $stmt = $pdo->prepare('INSERT INTO users (username, password, email) VALUES (:username, :password, :email)');
+    return $stmt->execute(['username' => $username, 'password' => $hashedPassword, 'email' => $email]);
+}
+
+
+
 ?>

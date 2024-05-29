@@ -1,8 +1,23 @@
 <?php
 // home.php
+session_start();
+
 include_once 'includes/functions.php';
 $products = getProducts();
+
+// Check if user is logged in
+if (isset($_SESSION['username'])) {
+    $user       = $_SESSION['username'];
+    $loggedin   = true;
+    $userstr    = "Logged in as $user";
+} else {
+    $loggedin = false;
+    // Redirect to login page or handle as needed
+    // header("Location: index.php?page=home");
+    // exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +32,19 @@ $products = getProducts();
             <a href="index.php?page=home">Home</a>
             <a href="index.php?page=products">Products</a>
             <a href="index.php?page=cart">Cart</a>
+            <?php if ($loggedin): ?>
+                <a href="index.php?page=logout">Logout</a>
+                <a href="index.php?page=profile">
+                    <span class="username"><?php echo $user[0];?></span>
+                </a>
+            <?php else: ?>
+                <a href="index.php?page=login">Login</a>
+                <a href="index.php?page=register">Register</a>
+            <?php endif; ?>
         </div>
     </div>
+
+    
 
 
     <div class="products">
