@@ -356,52 +356,82 @@ body {
 
 
 
-/* ----------------Product---------------- */
-
+/*----------------- Product single page -------------------*/
 .product-single {
-    margin: 50px auto;
-    padding: 20px;
+    width: 28%;
+    height: 28rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
     background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .product-single h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
 .product-single img {
-    height: 15rem;
-    width: 10rem;
-    height: auto;
-    margin-bottom: 20px;
+    max-width: 100%;
+    height: 10rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .product-single p {
+    font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 15px;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 .product-single p.price {
-    font-size: 18px;
+    font-size: 1.5rem;
+    color: #e74c3c;
     font-weight: bold;
 }
 
 .product-single a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #3498db;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .product-single a:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
 }
+
+
+@media (max-width: 768px) {
+    .product-single {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .product-single h1 {
+        font-size: 1.75rem;
+    }
+
+    .product-single p {
+        font-size: 1rem;
+    }
+
+    .product-single p.price {
+        font-size: 1.25rem;
+    }
+}
+
+
+
+
 
 
 
