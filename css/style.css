@@ -47,7 +47,7 @@ body {
 }
 
 /* -------------------Header------------------- */
-.navbar{
+/* .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +55,6 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
@@ -74,7 +73,118 @@ body {
 .navlinks > a:hover{
     color: #000;
     text-decoration: underline;
+} */
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 0 10rem;
 }
+
+.navbar .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar .logo .font2 {
+    font-size: 0.75rem;
+}
+
+.navbar .navlinks {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .navlinks a {
+    color: #444;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.navbar .navlinks a:hover {
+    text-decoration: underline;
+}
+
+.navbar .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.navbar .drawer-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobile view drawer */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .drawer-toggle {
+        display: block;
+        color: #000;
+    }
+
+    .navbar .navlinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .navlinks a {
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+        border-top: 1px solid #444;
+    }
+
+    .navbar .navlinks a:first-child {
+        border-top: none;
+    }
+
+    .navbar.open .navlinks {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .username {
     background-color: #b12a5b;
