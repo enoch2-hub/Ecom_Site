@@ -84,7 +84,7 @@ body {
     align-items: center;
     padding: 1rem;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     top: 0;
     left: 0;
@@ -106,10 +106,13 @@ body {
 .navbar .navlinks {
     display: flex;
     gap: 1rem;
+    background-image: linear-gradient(rgba(204, 71, 19, 0.76), rgba(80, 9, 80, 0.932));
+    border-radius: 0.5rem;
+    padding: 2rem;
 }
 
 .navbar .navlinks a {
-    color: #444;
+    color: #ffffff;
     text-decoration: none;
     margin-right: 1rem;
     font-size: 1.2rem;
@@ -136,12 +139,14 @@ body {
     cursor: pointer;
 }
 
-/* Mobile view drawer */
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 0 4rem;
     }
+}
+
+/* Mobile view drawer */
+@media (max-width: 900px) {
 
     .navbar .drawer-toggle {
         display: block;
