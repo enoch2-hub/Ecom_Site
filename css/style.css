@@ -139,6 +139,17 @@ body {
     cursor: pointer;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
 @media (max-width: 1600px) {
     .navbar {
@@ -157,14 +168,15 @@ body {
         border-radius: 1rem;
         transition: all 0.3s ease;
     }
+
     .menu-icon {
-        font-size: 2rem;
-        cursor: pointer;
+        display: block;
     }
+
     .close-icon {
-        font-size: 2rem;
-        cursor: pointer;
+        display: block;
     }
+
     .navbar .drawer-toggle {
         display: block;
         color: #000;
