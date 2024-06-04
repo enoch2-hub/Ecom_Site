@@ -2,6 +2,7 @@
 // cart.php
 session_start();
 
+
 // Check if action is 'add' and add item to cart if needed
 if (isset($_GET['action']) && $_GET['action'] == 'add') {
     $id = $_GET['id'];
@@ -43,26 +44,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'remove') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.php?page=home" style="text-decoration:none">
-            <h1 class='font3'>T S</h1>
-        </a>
-        <div class="navlinks">
-            <a href="index.php?page=home">Home</a>
-            <a href="index.php?page=products">Products</a>
-            <a href="index.php?page=cart">Cart</a>
-            <?php if (isset($_SESSION['user'])): ?>
-                <a href="index.php?page=profile">
-                    <img src="img/<?php echo $_SESSION['user']['profile_pic']; ?>" alt="Profile Picture" class="profile-pic">
-                    <?php echo $_SESSION['user']['username']; ?>
-                </a>
-                <a href="index.php?page=logout">Logout</a>
-            <?php else: ?>
-                <a href="index.php?page=login">Login</a>
-                <a href="index.php?page=register">Register</a>
-            <?php endif; ?>
-        </div>
-    </div>
+
+    <?php require_once 'partials/navbar.php'; ?>
+
 
     <h1>Shopping Cart</h1>
     <div class="cart-items">

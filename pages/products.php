@@ -26,28 +26,8 @@ if (isset($_SESSION['username'])) {
 </head>
 <body>
     <!-- <h1>Welcome to our Tech Store</h1> -->
-    <div class="navbar">
-        <a href="index.php?page=home" style="text-decoration:none">
-            <h1 class='font3'>T S</h1>
-        </a>
-        <div class="navlinks">
-            <a href="index.php?page=home">Home</a>
-            <a href="index.php?page=products">Products</a>
-            <a href="index.php?page=cart">Cart</a>
-            <?php if ($loggedin): ?>
-                <a href="index.php?page=logout">Logout</a>
-                <a href="index.php?page=profile">
-                    <span class="username"><?php echo $user[0];?></span>
-                </a>
-            <?php else: ?>
-                <a href="index.php?page=login">Login</a>
-                <a href="index.php?page=register">Register</a>
-            <?php endif; ?>
-        </div>
-    </div>
-
+    <?php require_once 'partials/navbar.php'; ?>
     
-
 
     <div class="products">
         <?php foreach ($products as $product): ?>

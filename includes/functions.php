@@ -17,8 +17,6 @@ function getProducts() {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-
-
 function login($username, $password) {
     global $pdo;
     

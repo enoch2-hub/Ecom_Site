@@ -4,7 +4,8 @@
 $host = 'localhost';
 $db = 'ecommerce';
 $user = 'root';
-$pass = 'eammysqL3712';
+// $pass = 'eammysqL3712';
+$pass = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
@@ -21,7 +22,6 @@ try {
 //     die("Connection failed: " . $conn->connect_error);
 // }
 
-
-
-
 ?>
+
+
